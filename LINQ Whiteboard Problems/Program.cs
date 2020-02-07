@@ -10,8 +10,8 @@ namespace LINQ_Whiteboard_Problems
     {
         static void Main(string[] args)
         {
-            AverageGrade average = new AverageGrade();
-            average.ConvertToIntArray();
+            NameLetterCounts nameLetter = new NameLetterCounts();
+            nameLetter.CountLettersInString();
             Console.ReadLine();
         }
     }
