@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LINQ_Whiteboard_Problems
 {
-    class THTest
+    public class THTest
     {
         //Return the full string for each string that containst the substring 'th'
 
@@ -17,12 +17,13 @@ namespace LINQ_Whiteboard_Problems
         //Constructor
 
         //Member Methods (CAN DO)
-        public List<string> SelectTHStrings()
+        public void SelectTHStrings()
         {
 
             var thStrings = words.Where(m => m.Contains("th")).ToList();
 
-            return thStrings;
+            foreach (string word in thStrings)
+            { Console.WriteLine(word); }
         }
     }
 }
