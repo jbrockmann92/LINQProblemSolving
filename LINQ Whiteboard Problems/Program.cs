@@ -10,8 +10,8 @@ namespace LINQ_Whiteboard_Problems
     {
         static void Main(string[] args)
         {
-            THTest tHTest = new THTest();
-            tHTest.SelectTHStrings();
+            NoDuplicatesList noDuplicates = new NoDuplicatesList();
+            noDuplicates.SelectSingleInstance();
             Console.ReadLine();
         }
     }
