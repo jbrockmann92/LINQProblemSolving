@@ -22,10 +22,11 @@ namespace LINQ_Whiteboard_Problems
         public void ConvertToIntArray()
         {
             //Might want to use what we learned in class today about passing in a method as a variable??
-            for (int i = 0; i < classGrades.Count; i++)
-            {
-                int[] gradesAsInts = classGrades[i].Split(',').Select(n => Convert.ToInt32(n)).ToArray();
-            }
+            //List < List<int> > integerList = new List<List<int>>();
+            var integerList = classGrades.Select(s => s.Split(',').Select(n => Convert.ToInt32(n)).ToList().OrderBy(n => n));
+                //Need nested for loop??
+                //Could just hard code four arrays to equal each one to. I don't like that.
+                //How to put the new arrays at the right spot?
         }
     }
 }

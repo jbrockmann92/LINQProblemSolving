@@ -10,9 +10,8 @@ namespace LINQ_Whiteboard_Problems
     {
         static void Main(string[] args)
         {
-            NoDuplicatesList noDuplicates = new NoDuplicatesList();
-            noDuplicates.SelectSingleInstance();
-            Console.ReadLine();
+            AverageGrade average = new AverageGrade();
+            average.ConvertToIntArray();
         }
     }
 }
