@@ -20,7 +20,6 @@ namespace LINQ_Whiteboard_Problems
             foreach (string name in onlyOneOfEach)
             {
                 Console.WriteLine(name);
-
             }
         }
     }

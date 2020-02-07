@@ -22,9 +22,9 @@ namespace LINQ_Whiteboard_Problems
         public void ConvertToIntArray()
         {
             var intList = classGrades.Select(s => s.Split(',').Select(int.Parse).ToList().OrderByDescending(i => i).Take(classGrades.Count).Average()).Average();
-            //close. Order of ops is wrong or something. Not getting the right number
+            //Take function isn't really right. Currently only works if each of the four lists above is five ints I think
 
-                Console.WriteLine(intList);
+            Console.WriteLine(intList);
 
             //Want to set things up such that it only adds all of the items in the converted list except the lowest.
         }
