@@ -12,6 +12,7 @@ namespace LINQ_Whiteboard_Problems
         {
             AverageGrade average = new AverageGrade();
             average.ConvertToIntArray();
+            Console.ReadLine();
         }
     }
 }

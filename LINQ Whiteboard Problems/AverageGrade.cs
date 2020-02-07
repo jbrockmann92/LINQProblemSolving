@@ -21,12 +21,12 @@ namespace LINQ_Whiteboard_Problems
         //Convert to ints
         public void ConvertToIntArray()
         {
-            //Might want to use what we learned in class today about passing in a method as a variable??
-            //List < List<int> > integerList = new List<List<int>>();
-            var integerList = classGrades.Select(s => s.Split(',').Select(n => Convert.ToInt32(n)).ToList().OrderBy(n => n));
-                //Need nested for loop??
-                //Could just hard code four arrays to equal each one to. I don't like that.
-                //How to put the new arrays at the right spot?
+            var intList = classGrades.Select(s => s.Split(',').Select(int.Parse).ToList().OrderBy(i => i).Take(classGrades.Count - 1).Average()).Average();
+            //close. Order of ops is wrong or something. Not getting the right number
+
+                Console.WriteLine(intList);
+
+            //Want to set things up such that it only adds all of the items in the converted list except the lowest.
         }
     }
 }
