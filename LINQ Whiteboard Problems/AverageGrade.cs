@@ -21,7 +21,7 @@ namespace LINQ_Whiteboard_Problems
         //Convert to ints
         public void ConvertToIntArray()
         {
-            var intList = classGrades.Select(s => s.Split(',').Select(int.Parse).ToList().OrderBy(i => i).Take(classGrades.Count - 1).Average()).Average();
+            var intList = classGrades.Select(s => s.Split(',').Select(int.Parse).ToList().OrderByDescending(i => i).Take(classGrades.Count).Average()).Average();
             //close. Order of ops is wrong or something. Not getting the right number
 
                 Console.WriteLine(intList);
