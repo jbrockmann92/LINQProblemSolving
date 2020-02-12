@@ -12,7 +12,6 @@ namespace LINQ_Whiteboard_Problems
 
         public void SelectTHStrings()
         {
-
             var thStrings = words.Where(m => m.Contains("th")).ToList();
 
             foreach (string word in thStrings)
