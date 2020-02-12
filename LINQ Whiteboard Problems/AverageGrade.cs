@@ -8,25 +8,13 @@ namespace LINQ_Whiteboard_Problems
 {
     class AverageGrade
     {
-
-        //Member Variables (HAS A)
         List<string> classGrades = new List<string>() { "80,100,92,89,65", "93,81,78,84,69", "73,88,83,99,64", "98,100,66,74,55" };
-        //Need to convert to ints by comma
-        //Need to get four lists of ints that contain all but the lowest number
-        //Need to average each list and return and int
-        //Need to add those four numbers together, then divide by four
 
-        //Member Methods (CAN DO)
-
-        //Convert to ints
         public void ConvertToIntArray()
         {
-            var intList = classGrades.Select(s => s.Split(',').Select(int.Parse).ToList().OrderByDescending(i => i).Take(classGrades.Count).Average()).Average();
-            //Take function isn't really right. Currently only works if each of the four lists above is five ints I think
-
+            var intList = classGrades.Select(s => s.Split(',').Select(int.Parse).ToList()).ToList();
+            var removedInts = intList.Where(x => x.Remove(x.Min())).ToList();
             Console.WriteLine(intList);
-
-            //Want to set things up such that it only adds all of the items in the converted list except the lowest.
         }
     }
 }

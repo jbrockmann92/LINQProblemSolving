@@ -8,12 +8,8 @@ namespace LINQ_Whiteboard_Problems
 {
     class NoDuplicatesList
     {
-        //Member Variables (HAS A)
         List<string> names = new List<string>() { "Mike", "Brad", "Nevin", "Ian", "Mike" };
 
-        //Constructor
-
-        //Member Methods (CAN DO)
         public void SelectSingleInstance()
         {
             var onlyOneOfEach = names.Distinct();
